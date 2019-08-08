@@ -1,0 +1,13 @@
+D:\2\SS\שעון מסתובב\kclock\kclock\bin\Debug\kclock.exe
+D:\2\SS\שעון מסתובב\kclock\kclock\bin\Debug\kclock.pdb
+D:\2\SS\שעון מסתובב\kclock\kclock\obj\Debug\Window1.baml
+D:\2\SS\שעון מסתובב\kclock\kclock\obj\Debug\Window1.g.cs
+D:\2\SS\שעון מסתובב\kclock\kclock\obj\Debug\App.g.cs
+D:\2\SS\שעון מסתובב\kclock\kclock\obj\Debug\kclock_MarkupCompile.cache
+D:\2\SS\שעון מסתובב\kclock\kclock\obj\Debug\kclock.g.resources
+D:\2\SS\שעון מסתובב\kclock\kclock\obj\Debug\kclock.Properties.Resources.resources
+D:\2\SS\שעון מסתובב\kclock\kclock\obj\Debug\kclock.csproj.GenerateResource.cache
+D:\2\SS\שעון מסתובב\kclock\kclock\obj\Debug\kclock.csproj.CoreCompileInputs.cache
+D:\2\SS\שעון מסתובב\kclock\kclock\obj\Debug\kclock.exe
+D:\2\SS\שעון מסתובב\kclock\kclock\obj\Debug\kclock.pdb
+D:\2\SS\שעון מסתובב\kclock\kclock\obj\Debug\kclock.csprojAssemblyReference.cache

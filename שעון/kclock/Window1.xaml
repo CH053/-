@@ -1,0 +1,226 @@
+﻿<Window x:Name="window" x:Class="kclock.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStartupLocation="Manual" 
+        Title="kClock" Height="246" Width="229" ShowInTaskbar="False" Topmost="True" Top="50" Left="50" Opacity="0.7" IsHitTestVisible="True" Closing="Window_Closing">
+    <Window.Resources>
+        <ContextMenu x:Key="NotifierContext" Placement="MousePoint">
+            <MenuItem Name="SHA" Header="עם קליטת העכבר" Click="Menu_Open"/>
+            <MenuItem Header="בלי קליטת עכבר" Click="MenuItem_Click"/>
+            <MenuItem Header="תרום למרכז ההצלה" Background="#FFF0F75E" Click="MenuItem_Click_1">
+                <MenuItem.Icon>
+                    <Image Source="סמל מרכז ההצלה.png" Width="20" />
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Header="הסתבכת עם הצבא - תן לנו להסתדר איתם" Background="#FF41FD38" Click="MenuItem_Click_2" >
+                <MenuItem.Icon>
+                    <Image Source="סמל מרכז ההצלה.png" Width="20" />
+                </MenuItem.Icon>
+            </MenuItem>
+            <Separator />
+            <MenuItem x:Name="RTT" IsCheckable="True" IsChecked="True" Click="MenuItem_Click_3" Header="מופעל בהפעלת המחשב"/>
+            <MenuItem Header="סגור שעון" Click="Menu_Close"/>
+        </ContextMenu>
+    </Window.Resources>
+    <Grid >
+        <Canvas Name="canvas" Height="200" Width="200" 
+                MouseMove="canvas_MouseMove" Opacity="0.8" MouseLeave="canvas_MouseLeave" MouseLeftButtonDown="border1_MouseLeftButtonDown" >
+            <Canvas.ContextMenu>
+                <ContextMenu >
+                    <MenuItem Name="Green" Click="Green_Click" Header="ירוק" Foreground="Green"/>
+                    <MenuItem Name="Grey" Click="Grey_Click" Header="אפור"/>
+                    <MenuItem Name="Blue" Click="Blue_Click" Header="כחול" Foreground="Blue"/>
+                    <MenuItem Name="Red" Click="Red_Click" Header="אדום" Foreground="Red"/>
+                </ContextMenu>
+            </Canvas.ContextMenu>
+
+            <WrapPanel Margin="170,10,0,0">
+                <Button Name="closeBtn" Content="X" Foreground="White"
+                        Click="closeBtn_Click" Height="20" Width="20"
+                        Background="#FF0023FF" Opacity="0.4" Visibility="Hidden"/>
+            </WrapPanel>
+
+            <Ellipse Height="200" Width="200" Name="roundDial" 
+                     Stroke="Transparent" Opacity="0.7">
+                <Ellipse.Fill>
+                    <RadialGradientBrush GradientOrigin="0.5,0.5">
+
+                        <GradientStop Color="#FF003AFF"/>
+                        <GradientStop Color="#FF3440C1" Offset="0.99"/>
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+
+            </Ellipse>
+            <Image Source="סמל מרכז ההצלה.png" Width="80" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="60,30,0,0">
+
+            </Image>
+            <Line Name="twelve" 
+                  X1="100" Y1="10"
+                  X2="100" Y2="2"
+                  Stroke="White" 
+                  StrokeThickness="2"/>
+
+            <Line Name="One" 
+                  X1="100" Y1="5"
+                  X2="100" Y2="2"
+                  Stroke="White" 
+                  StrokeThickness="2">
+                <Line.RenderTransform>
+                    <RotateTransform Angle="30" CenterX="100" CenterY="100"/>
+                </Line.RenderTransform>
+            </Line>
+
+            <Line Name="Two" 
+                  X1="100" Y1="5"
+                  X2="100" Y2="2"
+                  Stroke="White" 
+                  StrokeThickness="2">
+                <Line.RenderTransform>
+                    <RotateTransform Angle="60" CenterX="100" CenterY="100"/>
+                </Line.RenderTransform>
+            </Line>
+
+            <Line Name="three" 
+                  X1="100" Y1="10"
+                  X2="100" Y2="2"
+                  Stroke="White" 
+                  StrokeThickness="2">
+                <Line.RenderTransform>
+                    <RotateTransform Angle="90" CenterX="100" CenterY="100"/>
+                </Line.RenderTransform>
+            </Line>
+
+            <Line Name="four" 
+                  X1="100" Y1="5"
+                  X2="100" Y2="2"
+                  Stroke="White" 
+                  StrokeThickness="2">
+                <Line.RenderTransform>
+                    <RotateTransform Angle="120" CenterX="100" CenterY="100"/>
+                </Line.RenderTransform>
+            </Line>
+
+            <Line Name="five" 
+                  X1="100" Y1="5"
+                  X2="100" Y2="2"
+                  Stroke="White" 
+                  StrokeThickness="2">
+                <Line.RenderTransform>
+                    <RotateTransform Angle="150" CenterX="100" CenterY="100"/>
+                </Line.RenderTransform>
+            </Line>
+
+            <Line Name="six" 
+                  X1="100" Y1="10"
+                  X2="100" Y2="2"
+                  Stroke="White" 
+                  StrokeThickness="2">
+                <Line.RenderTransform>
+                    <RotateTransform Angle="180" CenterX="100" CenterY="100"/>
+                </Line.RenderTransform>
+            </Line>
+
+            <Line Name="seven" 
+                  X1="100" Y1="5"
+                  X2="100" Y2="2"
+                  Stroke="White" 
+                  StrokeThickness="2">
+                <Line.RenderTransform>
+                    <RotateTransform Angle="210" CenterX="100" CenterY="100"/>
+                </Line.RenderTransform>
+            </Line>
+
+            <Line Name="eight" 
+                  X1="100" Y1="5"
+                  X2="100" Y2="2"
+                  Stroke="White" 
+                  StrokeThickness="2">
+                <Line.RenderTransform>
+                    <RotateTransform Angle="240" CenterX="100" CenterY="100"/>
+                </Line.RenderTransform>
+            </Line>
+
+            <Line Name="nine" 
+                  X1="100" Y1="10"
+                  X2="100" Y2="2"
+                  Stroke="White" 
+                  StrokeThickness="2">
+                <Line.RenderTransform>
+                    <RotateTransform Angle="270" CenterX="100" CenterY="100"/>
+                </Line.RenderTransform>
+            </Line>
+
+            <Line Name="ten" 
+                  X1="100" Y1="5"
+                  X2="100" Y2="2"
+                  Stroke="White" 
+                  StrokeThickness="2">
+                <Line.RenderTransform>
+                    <RotateTransform Angle="300" CenterX="100" CenterY="100"/>
+                </Line.RenderTransform>
+            </Line>
+
+            <Line Name="eleven" 
+                  X1="100" Y1="5"
+                  X2="100" Y2="2"
+                  Stroke="White" 
+                  StrokeThickness="2">
+                <Line.RenderTransform>
+                    <RotateTransform Angle="330" CenterX="100" CenterY="100"/>
+                </Line.RenderTransform>
+            </Line>
+
+            <TextBlock Text="12" 
+                       Margin="90,10,0,0"
+                       FontSize="20"
+                       Foreground="White"
+                       FontFamily="Courier New"/>
+            <TextBlock Text="3" 
+                       FontSize="20"
+                       Margin="176,90,0,0"
+                       Foreground="White"
+                       FontFamily="Courier New"/>
+            <TextBlock Text="6" 
+                       FontSize="20"
+                       Margin="93,168,0,0"
+                       Foreground="White"
+                       FontFamily="Courier New"/>
+            <TextBlock Text="9" 
+                       FontSize="20"
+                       Margin="12,90,0,0"
+                       Foreground="White"
+                       FontFamily="Courier New"/>
+
+            <Line Name="mins" 
+                  StrokeThickness="5"
+                  Stroke="White" StrokeEndLineCap="Triangle"
+                  StrokeStartLineCap="Round"
+                  X2="100" Y2="30"
+                  X1="100" Y1="100"/>
+            <Line Name="hrs" 
+                  StrokeThickness="6"
+                  Stroke="White" 
+                  StrokeStartLineCap="Round"
+                  StrokeEndLineCap="Triangle"
+                  X2="100" Y2="45"
+                  X1="100" Y1="100"/>
+            <Line Name="secs" 
+                  StrokeThickness="3"
+                  Stroke="White" StrokeEndLineCap="Round"
+                  StrokeStartLineCap="Round" Y2="15"
+                  X1="100" Y1="115" X2="100"/>
+
+            <Ellipse Height="10" Width="10"
+                     Fill="#FF003AFF" Name="centerEllipse"
+                     StrokeThickness="2" Margin="95,95,0,0"
+                     Stroke="White"/>
+
+            <Label x:Name="תאריך" Content="רק רגע" VerticalAlignment="Bottom" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Canvas.Left="30" Canvas.Top="130" HorizontalAlignment="Center" Foreground="White"/>
+            
+
+        </Canvas>
+    </Grid>
+</Window>
