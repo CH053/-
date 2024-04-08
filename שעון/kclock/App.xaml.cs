@@ -12,5 +12,6 @@ namespace kclock
     /// </summary>
     public partial class App : Application
     {
+     //ניסיון לשינוי
     }
 }
